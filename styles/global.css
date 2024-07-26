@@ -1,0 +1,69 @@
+*,
+ *::after,
+ *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ :root {
+  --pink-light: #c59dd2;
+  --pink-base: #9547a5;
+  --pink-dark: #7d298a;
+  --pink-low: #3f0f41;
+  --blue-light: #73b6d2;
+  --blue-base: #358bb9;
+  --blue-mid: #2374a4;
+  --blue-dark: #144a72;
+  --blue-low: #08233c;
+  --shape-stroke: #002347;
+  --shape-hover: #001933;
+  --shape-base: #000f1f;
+  --shape-background: #00050a;
+  --text-title: #f8fbfb;
+  --text-body: #e2e7e9;
+  --text-label: #bac6c9;
+
+  --raleway: 'Raleway', sans-serif;
+
+  --xlarge: 3rem;
+  --large: 2.5rem;
+  --medium: 2rem;
+  --size-base: 1rem;
+  --small: .875rem;
+  --xsmall: .75rem;
+
+  --title-lg: 700 var(--xlarge) var(--raleway);
+  --title-md: 700 var(--large) var(--raleway);
+  --title-sm: 700 var(--medium) var(--raleway);
+  --title-xs: 700 var(--size-base) var(--raleway);
+  --body-lg: ;
+ }
+
+ #app {
+  max-width: 90rem;
+ }
+
+ body {
+  background-color: var(--shape-background);
+ }
+
+ h2 {
+  font: 500 var(--medium)/2 var(--raleway);
+ }
+
+ .content-tag {
+  font: 700 .625rem var(--raleway);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+ }
+
+ a {
+  font: 500 var(--small) var(--raleway);
+  color: inherit;
+  text-decoration: none;
+ }
+
+ button {
+  font: 700 var(--small) var(--raleway);
+ }
