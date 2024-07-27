@@ -1,0 +1,29 @@
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: initial;
+}
+
+@media (width >= 80em) {
+  .desktop-only {
+    display: initial;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
