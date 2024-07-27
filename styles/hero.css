@@ -1,12 +1,13 @@
 section#hero {
   max-width: 23.80rem;
+  height: 19rem;
   padding: 1.25rem;
-  margin-inline: auto;
   background-image: url(../assets/images/hero-background.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: 160%;
+  margin-bottom: 2rem;
+ 
   & nav {
     justify-content: space-between;
     margin-bottom: 3rem;
@@ -66,6 +67,13 @@ section#hero {
       font: 400 .875rem/1.4 var(--raleway);
       color: var(--text-body);
       max-width: 21rem;
+    }
+  }
+
+  & .spells {
+    
+    & img {
+      width: 2.5rem;
     }
   }
 }
