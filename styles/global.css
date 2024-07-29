@@ -27,8 +27,7 @@
   --raleway: "Raleway", sans-serif;
 
   --title-lg: 700 1.75rem var(--raleway);
-  --title-md: 700 2.5rem var(--raleway);
-  --title-sm: 700 2rem var(--raleway);
+  --title-sm: 700 1.5rem var(--raleway);
   --title-xs: 700 1rem var(--raleway);
 }
 
@@ -37,7 +36,8 @@ body {
 }
 
 h3 {
-  font: 500 2rem/2 var(--raleway);
+  font: 500 1rem/2 var(--raleway);
+  color: var(--text-body);
 }
 
 .content-tag {
@@ -59,8 +59,15 @@ button {
 @media (width >= 80em) {
   :root {
     --title-lg: 700 3rem var(--raleway);
-    --title-md: 700 2.5rem var(--raleway);
     --title-sm: 700 2rem var(--raleway);
-    --title-xs: 700 1rem var(--raleway);
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 200%;
+  }
+
+  & h3 span {
+    font-weight: 700;
   }
 }

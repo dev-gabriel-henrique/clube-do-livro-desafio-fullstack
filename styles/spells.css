@@ -1,0 +1,67 @@
+section#spells {
+  max-width: 22.5rem;
+  padding: 2rem 1.25;
+  text-align: center;
+  position: relative;
+  margin: 4rem auto;
+
+  & img[src*="crystal"] {
+    position: absolute;
+    bottom: -2rem;
+    right: 1rem;
+    transform: rotate(15deg);
+  }
+
+  & img[src*="opened-spellbook"] {
+    position: absolute;
+    right: 5rem;
+    bottom: 8rem;
+  }
+
+  & img[src*="ouija"] {
+    position: absolute;
+    left: 0.5rem;
+    bottom: -1.5rem;
+    transform: rotate(-50deg);
+  }
+
+
+  & img {
+    width: 2.5rem;
+  }
+
+  & span {
+    color: var(--blue-light);
+  }
+}
+
+@media (width >= 80em) {
+  section#spells {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: 8rem 10.6rem 9rem;
+
+    & img[src*="crystal"] {
+      bottom: 6rem;
+      right: 8rem;
+      transform: rotate(-20deg);
+    }
+
+    & img[src*="opened-spellbook"] {
+      right: 50%;
+      top: 6rem;
+    }
+
+    & img[src*="ouija"] {
+      left: 10rem;
+      bottom: 6rem;
+      transform: rotate(100deg);
+    }
+
+
+    & h3 {
+      max-width: 72.875rem;
+      font-size: 1.5rem;
+    }
+  }
+}
