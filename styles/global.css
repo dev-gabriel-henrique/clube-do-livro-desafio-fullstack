@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
 }
 
 :root {
@@ -32,7 +35,7 @@
 }
 
 body {
-  background-color: var(--shape-background);
+  background: radial-gradient(circle, rgba(2,5,12,1) 0%, rgba(24,10,28,1) 0%, rgba(0,5,10,1) 100%);
 }
 
 h3 {

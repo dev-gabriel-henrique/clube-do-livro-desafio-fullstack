@@ -1,12 +1,11 @@
 section#hero {
-  max-width: 23.80rem;
-  height: 19rem;
+  max-width: 23.5rem;
+  height: 29rem;
   padding: 1.25rem;
   background-image: url(../assets/images/hero-background.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 160%;
-  margin-bottom: 2rem;
+  background-size: cover;
  
   & nav {
     justify-content: space-between;
@@ -69,18 +68,12 @@ section#hero {
       max-width: 21rem;
     }
   }
-
-  & .spells {
-    
-    & img {
-      width: 2.5rem;
-    }
-  }
 }
 
 @media (width >= 80em) {
   section#hero {
     max-width: 90rem;
+    height: 59.25rem;
     padding: 3.5rem 10rem;
     margin-inline: auto;
 
