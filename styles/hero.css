@@ -1,15 +1,16 @@
 section#hero {
-  max-width: 23.5rem;
-  height: 29rem;
-  padding: 1.25rem;
+  width: 100%;
+  height: 100vh;
   background-image: url(../assets/images/hero-background.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
- 
+  margin-bottom: 2rem;
+
   & nav {
     justify-content: space-between;
     margin-bottom: 3rem;
+    padding: 1.25rem;
 
     & a {
       position: relative;
@@ -38,7 +39,7 @@ section#hero {
     & a::before {
       content: "";
       width: 100%;
-      height: 2.75rem;
+      height: 2.85rem;
       border-radius: 0.875rem;
       background-color: var(--pink-light);
 
@@ -55,7 +56,9 @@ section#hero {
   & .title {
     display: grid;
     gap: 1rem;
+    padding: 1.25rem;
     text-align: center;
+    margin-inline: auto;
 
     & h1 {
       font: var(--title-lg);
@@ -63,9 +66,8 @@ section#hero {
     }
 
     & p {
-      font: 400 .875rem/1.4 var(--raleway);
+      font: 400 0.875rem/1.4 var(--raleway);
       color: var(--text-body);
-      max-width: 21rem;
     }
   }
 }
@@ -73,23 +75,21 @@ section#hero {
 @media (width >= 80em) {
   section#hero {
     max-width: 90rem;
-    height: 59.25rem;
+    height: fit-content;
     padding: 3.5rem 10rem;
-    margin-inline: auto;
 
     & nav {
       margin-bottom: 10.25rem;
     }
 
     & .title {
-      width: 41rem;
-      margin-inline: auto;
       gap: 2rem;
+      text-align: center;
+      max-width: 41rem;
 
       & p {
         font-size: 1.25rem;
-        max-width: 35.5rem;
       }
     }
-   }
- }
+  }
+}

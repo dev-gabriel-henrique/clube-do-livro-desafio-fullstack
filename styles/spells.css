@@ -1,13 +1,12 @@
 section#spells {
-  max-width: 23.5rem;
-  padding: 2rem 1.25rem;
+  width: 100%;
+  padding: 5rem 1.25rem;
   text-align: center;
   position: relative;
-  margin: 4rem auto;
 
   & img[src*="crystal"] {
     position: absolute;
-    bottom: 0rem;
+    bottom: 3rem;
     right: 1.5rem;
     transform: rotate(15deg);
   }
@@ -15,13 +14,13 @@ section#spells {
   & img[src*="opened-spellbook"] {
     position: absolute;
     right: 5rem;
-    bottom: 10rem;
-
+    top: 2.5rem;
   }
+  
   & img[src*="ouija"] {
     position: absolute;
     left: 1rem;
-    bottom: 0rem;
+    bottom: 3rem;
     transform: rotate(-30deg);
   }
 
@@ -36,9 +35,9 @@ section#spells {
 
 @media (width >= 80em) {
   section#spells {
-    max-width: 90rem;
+    max-width: 80rem;
     margin-inline: auto;
-    padding: 8rem 10.6rem 9rem;
+    padding: 8.5rem 10.8rem;
 
     & img[src*="crystal"] {
       bottom: 6rem;
@@ -59,7 +58,7 @@ section#spells {
 
 
     & h3 {
-      max-width: 72.875rem;
+      max-width: 75rem;
       font-size: 1.5rem;
     }
   }
