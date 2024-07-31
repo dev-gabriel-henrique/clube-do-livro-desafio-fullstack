@@ -3,8 +3,8 @@ section#kit {
   width: 100%;
   padding: 6.5rem 0.75rem;
   color: var(--text-body);
-  margin: auto;
-
+  overflow: hidden;
+  margin-inline: auto;
 
   & header {
     display: grid;
@@ -31,74 +31,162 @@ section#kit {
     }
   }
 
-  & > div {
-    justify-content: end;
+  & > .book {
+    position: relative;
 
-    & figure:nth-child(1) {
-      & img {
-        width: 4rem;
-        transform: translateY(220%) translateX(70%) rotate(-5deg);
-        position: relative;
-        z-index: -1;
+    & img[src*="book.png"] {
+      position: absolute;
+      width: 50%;
+      margin: auto;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 3;
+    }
+
+    & .card {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0.75rem;
+
+      transform: translateX(7rem) translateY(1rem);
+
+      transition: all 500ms ease-in-out;
+
+      & p {
+        font: 400 0.625rem var(--raleway);
       }
 
-      & figcaption {
+      & img {
+        width: 20%;
+        transform: translateX(40%);
+      }
+    }
+
+    & .pin {
+      & img[src*="pin"] {
+        width: 20%;
+        transition: all 500ms ease-in-out;
+        transform: translateY(7.5rem) translateX(7rem) rotate(-8deg);
+      }
+
+      & .cards {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+        transition: all 500ms ease-in-out;
+
+        transform: translateX(7rem);
+
         & p {
           font: 400 0.625rem var(--raleway);
-          transform: translateY(-1rem) translateX(5%);
         }
 
         & img {
-          width: 50%;
-          transform: translateX(58%) translateY(3.275rem);
+          width: 15%;
+          transform: translateX(1rem);
         }
       }
     }
 
-    & figure:nth-child(2) {
-      & img {
-        width: 9.8rem;
+    & .bookmarks {
+      transform: translateX(10rem) translateY(-15rem);
+      transition: all 500ms ease-in-out;
+
+      & img[src*="yellow"] {
+        width: 18%;
+        transform: translateY(3rem);
+        z-index: 2;
+
+        transition: all 500ms ease-in-out;
       }
 
-      & figcaption {
+      & img[src*="purple"] {
+        width: 19%;
+        transform: translateX(-2rem) translateY(4rem);
+        transition: all 500ms ease-in-out;
+      } 
+
+      & .cards {
+        display: grid;
+        gap: 0.75rem;
+        transition: all 500ms ease-in-out;
+
+        transform: translateY(-1rem);
+
         & p {
           font: 400 0.625rem var(--raleway);
-          transform: translateY(-16.4rem) translateX(-40%);
+          transform: translateX(-.5rem);
         }
 
         & img {
-          width: 35%;
-          transform: translateX(-45%) translateY(-14.1rem);
+          width: 15%;
+          transform: translateX(1rem);
         }
       }
     }
 
-    & figure:nth-child(3) {
-      & img {
-        width: 4rem;
-        height: 13rem;
-        position: relative;
+    &:hover {
+      & .card {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+        opacity: 1;
 
-        &:nth-child(1) {
-          transform: translateX(-30%) translateY(-20%) rotate(12deg);
-          z-index: -1;
-        }
-
-        &:nth-child(2) {
-          transform: translateX(1rem) translateY(-13.5rem) rotate(25deg);
-          z-index: -2;
-        }
-      }
-
-      & figcaption {
-        transform: translateY(-17rem) translateX(15%);
-        & img {
-          width: 30%;
-        }
+        transform: translateY(-2rem);
 
         & p {
           font: 400 0.625rem var(--raleway);
-          transform: translateY(-7.5rem) translateX(-25%);
+        }
+
+        & img {
+          width: 20%;
+          transform: translateX(40%);
+        }
+      }
+
+      & .pin {
+        opacity: 1;
+
+        & img[src*="pin"] {
+          transform: translateX(3.2rem) translateY(8rem) rotate(-8deg);
+        }
+
+        & .cards {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 0.75rem;
+
+          transform: translateY(-3rem);
+
+          & p {
+            font: 400 0.625rem var(--raleway);
+          }
+
+          & img {
+            width: 15%;
+            transform: translateX(1rem);
+          }
+        }
+      }
+
+      & .bookmarks {
+        transform: translateX(15rem) translateY(-15rem);
+        & img[src*="yellow"] {
+          width: 18%;
+          transform: rotate(10deg);
+          z-index: 2;
+        }
+  
+        & img[src*="purple"] {
+          width: 19%;
+          transform: rotate(22deg) translateX(-.5rem) translateY(4rem);
+        }
+
+        & .cards {
+          transform: translateX(1rem) translateY(3rem);
         }
       }
     }
@@ -127,76 +215,13 @@ section#kit {
     }
 
     & > div {
-      justify-content: end;
-
-      & figure:nth-child(1) {
-        & img {
-          width: 14rem;
-          transform: translateY(170%) translateX(45%) rotate(-5deg);
-          position: relative;
-          z-index: -1;
-        }
-
-        & figcaption {
-          & p {
-            font: 400 1rem/1.4 var(--raleway);
-            transform: translateY(-5rem) translateX(15%);
-          }
-
-          & img {
-            transform: translateX(40%) translateY(5.5rem);
-          }
-        }
-      }
-
-      & figure:nth-child(2) {
-        & img {
-          width: 29rem;
-        }
-
-        & figcaption {
-          & p {
-            font: 400 1rem/1.4 var(--raleway);
-            transform: translateY(-44rem) translateX(-25%);
-          }
-
-          & img {
-            transform: translateX(-40%) translateY(-40rem);
-          }
-        }
-      }
-
-      & figure:nth-child(3) {
-
-        & img {
-          width: 12rem;
-          height: 30rem;
-          position: relative;
-
-          &:nth-child(1) {
-            transform: translateX(-35%) translateY(-13%) rotate(12deg);
-            z-index: -1;
-          }
-
-          &:nth-child(2) {
-            transform: translateX(-10rem) translateY(3rem) rotate(25deg);
-            z-index: -2;
-          }
-        }
-
-        & figcaption {
-          transform: translateY(-20%) translateX(10%);
-
-          & img {
-            width: 30%;
-          }
-
-          & p {
-            font: 400 1rem/1.4 var(--raleway);
-            transform: translateY(-15rem) translateX(-20%);
-          }
-        }
-      }
+      justify-content: center;
     }
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: scale(0.5);
   }
 }

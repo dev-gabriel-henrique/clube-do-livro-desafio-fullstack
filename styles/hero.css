@@ -5,58 +5,13 @@ section#hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 2rem;
 
-  & nav {
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    padding: 1.25rem;
-
-    & a {
-      position: relative;
-      padding: 0.875rem 1.25rem;
-      background-color: var(--pink-dark);
-      border: none;
-      border-radius: 0.875rem;
-      color: var(--text-title);
-
-      & span {
-        position: relative;
-      }
-
-      &:hover::before {
-        opacity: 1;
-        background-color: var(--pink-base);
-        transform: scale(1);
-        border-radius: 0.875rem;
-      }
-
-      &:active {
-        transform: scale(0.85);
-      }
-    }
-
-    & a::before {
-      content: "";
-      width: 100%;
-      height: 2.85rem;
-      border-radius: 50%;
-      background-color: var(--pink-light);
-
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      left: 0;
-
-      transform: scaleX(0.3);
-      transition: all ease-in-out 200ms;
-    }
-  }
+  animation: appear 2s ease-in-out;
 
   & .title {
     display: grid;
     gap: 1rem;
-    padding: 1.25rem;
+    padding: 7rem 1.25rem;
     text-align: center;
     margin-inline: auto;
 
@@ -76,7 +31,7 @@ section#hero {
   section#hero {
     max-width: 90rem;
     height: fit-content;
-    padding: 3.5rem 10rem;
+    padding: 7rem 10rem;
 
     & nav {
       margin-bottom: 10.25rem;
@@ -91,5 +46,11 @@ section#hero {
         font-size: 1.25rem;
       }
     }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
   }
 }
