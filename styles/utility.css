@@ -18,6 +18,10 @@
   display: initial;
 }
 
+.grid {
+  display: grid;
+}
+
 @media (width >= 80em) {
   .desktop-only {
     display: initial;

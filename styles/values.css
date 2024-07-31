@@ -1,0 +1,301 @@
+section#values {
+  width: 100%;
+  padding-block: 5.5rem;
+
+  & header {
+    width: 100%;
+    color: var(--text-title);
+    text-align: center;
+
+    font: var(--title-sm);
+    margin-bottom: 4rem;
+  }
+
+  & .box {
+    overflow-x: scroll;
+    padding-inline: 3rem;
+    gap: 1rem;
+
+    & figure {
+      &:nth-child(1) {
+        & .price {
+          margin-bottom: 6rem;
+        }
+      }
+
+      &:nth-child(2) {
+        & .flex {
+          justify-content: space-between;
+        }
+
+        & .price {
+          margin-bottom: 3.6rem;
+        }
+
+        & .grid .features {
+          & svg path {
+            fill: var(--pink-base);
+          }
+        }
+
+        & button {
+          background-color: var(--pink-dark);
+
+          &:hover::before {
+            background-color: var(--pink-base);
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        & .price {
+          margin-bottom: 2.5rem;
+        }
+      }
+
+      & .plans {
+        display: grid;
+        align-items: center;
+
+        border-radius: 1.5rem;
+        border: 1px solid var(--shape-stroke);
+        background-color: var(--shape-base);
+
+        padding: 1.5rem 2rem 1.75rem;
+
+        & h2 {
+          color: var(--blue-light);
+          font: var(--title-sx);
+        }
+      }
+
+      & .price {
+        display: grid;
+        gap: 0.5rem;
+        color: var(--text-title);
+        margin-top: 1.25rem;
+
+        & h4 {
+          font: var(--title-md);
+
+          & span {
+            font: var(--title-sx);
+          }
+        }
+
+        & p {
+          color: var(--text-label);
+          font: 400 0.875rem var(--raleway);
+        }
+      }
+
+      & .grid {
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+
+        & .features {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+          & svg {
+            width: 0.875rem;
+            height: 0.875rem;
+
+            & path {
+              fill: var(--blue-light);
+            }
+          }
+
+          & p {
+            font: 400 0.75rem/1.4 var(--raleway);
+            color: var(--text-body);
+          }
+        }
+      }
+
+      & button {
+        position: relative;
+        width: 14rem;
+        height: 2.5rem;
+
+        padding-block: 0.75rem;
+
+        border: none;
+        border-radius: 0.5rem;
+        background-color: var(--blue-dark);
+
+        color: var(--text-title);
+
+        & span {
+          position: relative;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &:hover::before {
+          opacity: 1;
+          background-color: var(--blue-mid);
+          transform: scale(1);
+          border-radius: 0.5rem;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 2.5rem;
+          border-radius: 50%;
+          background-color: var(--blue-light);
+
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          left: 0;
+
+          transform: scaleX(0.3);
+          transition: all ease-in-out 300ms;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  section#values {
+    padding-block: 13rem;
+
+    & header {
+      margin-bottom: 3.5rem;
+    }
+
+    & .box {
+      gap: initial;
+      overflow: initial;
+
+      & figure {
+        &:nth-child(1) {
+          transform: scale(0.93) rotate(-8deg);
+          margin-left: auto;
+          transition: all 500ms ease-in-out;
+
+          & .plans {
+            transition: all 500ms ease-in-out;
+          }
+
+          & .stars {
+            display: flex;
+            flex-direction: column;
+            transform: translateX(-1.5rem) translateY(3rem) rotate(5deg);
+            width: fit-content;
+
+            & svg:nth-child(1) {
+              width: 1.625rem;
+              transition: all 500ms ease-in-out;
+            }
+
+            & svg:nth-child(2) {
+              width: 0.75rem;
+              transition: all 500ms ease-in-out;
+            }
+          }
+
+          &:hover {
+            transform: translateY(-2%) translateX(-2%) rotate(-8deg) scale(0.93);
+            z-index: 3;
+
+            & .stars {
+              & svg:nth-child(1) {
+                transform: rotate(20deg);
+              }
+              & svg:nth-child(2) {
+                transform: rotate(20deg);
+              }
+            }
+
+            & .plans {
+              box-shadow: -1px 3px 152px -46px rgba(3, 88, 187, 0.4);
+              background-color: var(--shape-hover);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          transform: translateY(-2rem);
+          z-index: 2;
+
+          transition: all 500ms ease-in-out;
+
+          & .plans {
+            transition: all 500ms ease-in-out;
+          }
+
+          & img[src*="rabbit"] {
+            transform: translateY(6%) translateX(80%);
+          }
+
+          &:hover {
+            transform: translateY(-10%);
+
+            & .plans {
+              box-shadow: -1px 3px 152px -46px rgba(3, 88, 187, 0.4);
+              background-color: var(--shape-hover);
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          margin-right: auto;
+          transition: all 500ms ease-in-out;
+          transform: rotate(8deg) translateY(3rem) translateX(-0.5rem)
+            scale(0.93);
+
+          & .plans {
+            transition: all 500ms ease-in-out;
+          }
+
+          & .stars {
+            width: fit-content;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+
+            transform: translateX(17.5rem) translateY(27rem) rotate(-10deg);
+
+            & svg:nth-child(1) {
+              transition: all 500ms ease-in-out;
+              width: 1.5rem;
+              transform: translateY(-90%);
+            }
+
+            & svg:nth-child(2) {
+              transition: all 500ms ease-in-out;
+              width: 0.75rem;
+            }
+          }
+
+          &:hover {
+            transform: translateX(-1%) translateY(3%) rotate(8deg) scale(0.93);
+            z-index: 2;
+
+            & .plans {
+              box-shadow: -1px 3px 152px -46px rgba(3, 88, 187, 0.4);
+              background-color: var(--shape-hover);
+            }
+
+            & .stars {
+              & svg:nth-child(1) {
+                transform: rotate(20deg) translateY(-100%);
+              }
+
+              & svg:nth-child(2) {
+                transform: rotate(-20deg) translateY(50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

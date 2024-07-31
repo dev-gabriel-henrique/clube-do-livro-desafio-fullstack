@@ -30,8 +30,9 @@
   --raleway: "Raleway", sans-serif;
 
   --title-lg: 700 1.75rem var(--raleway);
-  --title-sm: 700 1.5rem var(--raleway);
-  --title-xs: 700 1rem var(--raleway);
+  --title-md: 700 2.5rem var(--raleway);
+  --title-sm: 700 1.25rem var(--raleway);
+  --title-sx: 700 1rem var(--raleway);
 }
 
 body {
@@ -47,16 +48,25 @@ h3 {
   font: 700 0.625rem var(--raleway);
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  color: var(--text-body);
+  text-align: center;
+  
+  background-color: var(--shape-stroke);
+  border-radius: 2rem;
+  padding: .625rem 1.25rem;
+
+  width: 5.625rem;
+  height: 1.875rem;
 }
 
 a {
-  font: 500 var(--small) var(--raleway);
+  font: 500 .875rem var(--raleway);
   color: inherit;
   text-decoration: none;
 }
 
 button {
-  font: 700 var(--small) var(--raleway);
+  font: 700 .875rem var(--raleway);
 }
 
 @media (width >= 80em) {
