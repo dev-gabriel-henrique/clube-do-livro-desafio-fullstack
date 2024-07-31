@@ -1,8 +1,10 @@
 section#kit {
+  max-width: 23.5rem;
   width: 100%;
   padding: 6.5rem 0.75rem;
   color: var(--text-body);
-  justify-content: center;
+  margin: auto;
+
 
   & header {
     display: grid;
@@ -30,8 +32,7 @@ section#kit {
   }
 
   & > div {
-    justify-content: center;
-    margin: auto;
+    justify-content: end;
 
     & figure:nth-child(1) {
       & img {
@@ -126,7 +127,8 @@ section#kit {
     }
 
     & > div {
-      padding-inline: 7rem;
+      justify-content: end;
+
       & figure:nth-child(1) {
         & img {
           width: 14rem;
@@ -177,7 +179,7 @@ section#kit {
           }
 
           &:nth-child(2) {
-            transform: translateX(15%) translateY(-85%) rotate(25deg);
+            transform: translateX(-10rem) translateY(3rem) rotate(25deg);
             z-index: -2;
           }
         }
