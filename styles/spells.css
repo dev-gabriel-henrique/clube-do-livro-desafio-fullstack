@@ -6,19 +6,21 @@ section#spells {
 
   animation-name: appear;
   animation-timeline: view();
-  animation-range: cover;
+  animation-range-start: 10%;
+  animation-range-end: 50%;
 
   & img[src*="crystal"] {
     position: absolute;
     bottom: 3rem;
     right: 1.5rem;
-    transform: rotate(15deg);
+    transform: rotate(15deg) scale(1.4);
 
-    transition: animation 1s ease-in-out;
+    transition: all 400ms ease-in-out;
 
     animation-name: blink;
-    animation-range: cover;
     animation-timeline: view();
+    animation-range-start: 10%;
+    animation-range-end: 50%;
   }
 
   & img[src*="opened-spellbook"] {
@@ -27,8 +29,10 @@ section#spells {
     top: 2.5rem;
 
     animation-name: blink;
-    animation-range: cover;
+    animation-range-start: 10%;
+    animation-range-end: 50%;
     animation-timeline: view();
+    transform: scale(1.4);
   }
   
   & img[src*="ouija"] {
@@ -38,8 +42,11 @@ section#spells {
     transform: rotate(-30deg);
 
     animation-name: blink;
-    animation-range: cover;
+    animation-range-start: 10%;
+    animation-range-end: 50%;
     animation-timeline: view();
+    transform: scale(1.4);
+
   }
 
   & img {
@@ -57,21 +64,42 @@ section#spells {
     margin-inline: auto;
     padding: 8.5rem 10.8rem;
 
+    & img {
+      transition: all 800ms ease-in-out;
+    }
+
     & img[src*="crystal"] {
       bottom: 6rem;
       right: 8rem;
-      transform: rotate(-20deg);
+      transform: rotate(-20deg) scale(1.4);
+
+      transition: all 800ms ease-in-out;
+      
+      &:hover {
+        transform: rotate(-40deg) scale(1.8);
+      }
     }
 
     & img[src*="opened-spellbook"] {
       right: 50%;
       top: 6rem;
+      transform: scale(1.4);
+      transition: all 800ms ease-in-out;
+
+      &:hover {
+        transform: rotate(20deg) scale(1.8);
+      }
     }
 
     & img[src*="ouija"] {
       left: 10rem;
       bottom: 6rem;
-      transform: rotate(100deg);
+      transform: rotate(100deg) scale(1.4);
+      transition: all 800ms ease-in-out;
+
+      &:hover {
+      transform: rotate(120deg) scale(1.8);
+      }
     }
 
 
