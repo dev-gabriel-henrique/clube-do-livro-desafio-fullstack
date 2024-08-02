@@ -1,10 +1,19 @@
 section#kit {
   max-width: 23.5rem;
   width: 100%;
+ 
   padding: 6.5rem 0.75rem;
+ 
   color: var(--text-body);
+ 
   overflow: hidden;
   margin-inline: auto;
+
+  & .blur {
+    width: 100%;
+    height: 30px;
+    filter: blur(1.5rem);
+  }
 
   & header {
     display: grid;
@@ -71,6 +80,7 @@ section#kit {
       display: flex;
       flex-direction: column-reverse;
       gap: 0.75rem;
+      
 
       & p {
         font: 400 0.625rem var(--raleway);
@@ -117,6 +127,7 @@ section#kit {
 @media (width < 80em) {
   section#kit {
     & > .book {
+      
       & .card {
         animation: book-card-bloop 5s 1s ease-in-out both infinite;
       }
@@ -154,7 +165,7 @@ section#kit {
 
 @media (width >= 80em) {
   section#kit {
-    max-width: 90rem;
+    max-width: 137rem;
 
     & header {
       padding-inline: 12.3rem;

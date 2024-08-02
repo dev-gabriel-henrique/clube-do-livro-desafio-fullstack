@@ -5,6 +5,7 @@ section#hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-inline: auto;
 
   animation: appear 2s ease-in-out;
 
@@ -29,8 +30,7 @@ section#hero {
 
 @media (width >= 80em) {
   section#hero {
-    max-width: 90rem;
-    height: fit-content;
+    max-width: 137rem;
     padding: 7rem 10rem;
 
     & nav {
