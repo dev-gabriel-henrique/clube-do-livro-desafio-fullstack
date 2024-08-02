@@ -2,7 +2,7 @@ section#kit {
   max-width: 23.5rem;
   width: 100%;
  
-  padding: 6.5rem 0.75rem;
+  padding: 6.5rem 0.75rem 0;
  
   color: var(--text-body);
  
@@ -189,7 +189,8 @@ section#kit {
     }
 
     & .book {
-      width: 90%;
+      max-width: 1200px;
+      margin-inline: auto;
       transition: all 500ms ease-in-out;
       & .card {
         transform: translateY(2rem) translateX(25rem);
@@ -282,6 +283,7 @@ section#kit {
     }
   }
 }
+
 @keyframes book-card-bloop {
   0% {
     transform: translateX(7rem) translateY(1rem);
